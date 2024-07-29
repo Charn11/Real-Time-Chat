@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div id="user-page">
+            <input required type="text" placeholder="Enter username..." id="input-username" title="Enter atleast one character">
+            <button type="button" id="send-username-btn" disabled>Send</button>
+        </div>
+        <div id="user-cont">
+            <div id="users">
+                <h2>Current Users</h2>
+            </div>
+            <button id="public-chat-btn" class="inactive-public" disabled>Public chat</button>
+        </div>
+        <div class="main-container">
+            <div id="messages">
+                <div id="chat-with">Public chat</div>
+                <div id="messages-container">
+                </div>
+            </div>
+            <div id="send-msg">
+                <input type="text" placeholder="Type a message" id="input-msg" autocomplete="off">
+                <button id="send-msg-btn" type="button" class="public-send" disabled>
+                    <img id="send-svg" src="images/send-black.svg" alt="send message">
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
